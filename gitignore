@@ -1,0 +1,21 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+Icon?
+
+# Foldery/pliki VS Code (opcjonalnie zostaw, jeśli chcecie współdzielić ustawienia)
+.vscode/*
+!.vscode/extensions.json
+
+# Edytory
+*.swp
+*.swo
+*~
+
+# Logi / pliki tymczasowe
+*.log
+.tmp/
