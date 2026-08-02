@@ -215,6 +215,76 @@ a{color:var(--tua-navy); text-decoration:none;}
   z-index:2;
 }
 
+/* ===== ZAŁOGA / FOUNDER CARDS ===== */
+.founder-card{
+  padding:1.5rem 1rem 2rem;
+}
+.founder-photo{
+  width:120px; height:120px;
+  border-radius:50%;
+  margin:0 auto 1.2rem;
+  display:flex; align-items:center; justify-content:center;
+  overflow:hidden;
+  border:2px solid var(--tua-gold-soft);
+  background:#fff;
+}
+.founder-photo img{
+  width:100%; height:100%;
+  object-fit:cover;
+}
+.founder-photo.is-placeholder{
+  font-size:2.6rem;
+  color:var(--tua-gold-soft);
+  background:var(--tua-fog);
+}
+.founder-name{
+  font-family:'Playfair Display', serif;
+  font-size:1.2rem;
+  color:var(--tua-navy);
+  font-weight:600;
+}
+.founder-role{
+  font-size:.78rem;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  color:var(--tua-gold);
+  font-weight:600;
+  margin-bottom:.9rem;
+}
+.founder-bio{
+  font-size:.9rem;
+  color:#5b6773;
+  line-height:1.75;
+  max-width:340px;
+  margin:0 auto;
+  font-style:italic;
+}
+
+/* ===== LANGUAGE SWITCHER ===== */
+.lang-switch{
+  display:flex;
+  align-items:center;
+  gap:.5rem;
+  margin-left:.75rem;
+}
+.lang-switch a{
+  display:flex;
+  align-items:center;
+  opacity:.5;
+  transition:opacity .25s ease, transform .25s ease;
+}
+.lang-switch a.active{
+  opacity:1;
+}
+.lang-switch a:hover{
+  opacity:1;
+  transform:translateY(-1px);
+}
+.lang-switch .fi{
+  border-radius:3px;
+  box-shadow:0 0 0 1px rgba(15,30,50,.1);
+}
+
 /* ===== OFERTA CARDS ===== */
 .pillar-card{
   background:#fff;
@@ -405,6 +475,30 @@ footer a:hover{color:var(--tua-gold);}
 .reveal.is-visible{
   opacity:1;
   transform:translateY(0);
+}
+
+/* ===== FLOATING WHATSAPP BUTTON ===== */
+.whatsapp-float{
+  position:fixed;
+  right:1.4rem;
+  bottom:1.4rem;
+  width:58px;
+  height:58px;
+  background:#25D366;
+  color:#fff;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:1.7rem;
+  box-shadow:0 8px 24px rgba(14,42,71,.25);
+  z-index:1000;
+  transition:transform .25s ease, box-shadow .25s ease;
+}
+.whatsapp-float:hover{
+  color:#fff;
+  transform:translateY(-4px) scale(1.05);
+  box-shadow:0 12px 30px rgba(14,42,71,.3);
 }
 
 @media (max-width: 767.98px){
