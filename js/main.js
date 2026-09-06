@@ -46,4 +46,36 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     });
   });
+
+  // Hero background carousel
+  var slides = document.querySelectorAll('.hero-slide');
+  var dots = document.querySelectorAll('.hero-dot');
+  if (slides.length) {
+    var current = 0;
+    var intervalTime = 6000;
+    var timer;
+    var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    var goTo = function (index) {
+      slides[current].classList.remove('active');
+      if (dots[current]) dots[current].classList.remove('active');
+      current = (index + slides.length) % slides.length;
+      slides[current].classList.add('active');
+      if (dots[current]) dots[current].classList.add('active');
+    };
+
+    var startTimer = function () {
+      timer = setInterval(function () { goTo(current + 1); }, intervalTime);
+    };
+
+    dots.forEach(function (dot, i) {
+      dot.addEventListener('click', function () {
+        goTo(i);
+        clearInterval(timer);
+        if (!reduceMotion) startTimer();
+      });
+    });
+
+    if (!reduceMotion) startTimer();
+  }
 });
