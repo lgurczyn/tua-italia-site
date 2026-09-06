@@ -97,6 +97,7 @@ a{color:var(--tua-navy); text-decoration:none;}
   font-weight:600;
   padding:.85rem 2rem;
   transition:all .3s ease;
+  margin-top: .85rem;
 }
 .btn-tua:hover{
   background:transparent;
