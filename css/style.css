@@ -97,7 +97,6 @@ a{color:var(--tua-navy); text-decoration:none;}
   font-weight:600;
   padding:.85rem 2rem;
   transition:all .3s ease;
-  margin-top: .85rem;
 }
 .btn-tua:hover{
   background:transparent;
@@ -341,6 +340,15 @@ a{color:var(--tua-navy); text-decoration:none;}
 .lang-switch .fi{
   border-radius:3px;
   box-shadow:0 0 0 1px rgba(15,30,50,.1);
+}
+
+/* Na rozwiniętym mobilnym menu przycisk Kontakt zbyt mocno przylegał
+   do przełącznika flag, co ułatwiało przypadkowe dotknięcie flagi.
+   Dotyczy tylko widoku collapsed (poniżej progu navbar-expand-lg). */
+@media (max-width: 991.98px){
+  .nav-cta{
+    margin-top:.85rem;
+  }
 }
 
 /* ===== OFERTA CARDS ===== */
