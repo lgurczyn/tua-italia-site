@@ -351,6 +351,93 @@ a{color:var(--tua-navy); text-decoration:none;}
   }
 }
 
+/* ===== HIGHLIGHTS ===== */
+.highlight-card{
+  background:#fff;
+  border:1px solid #ebeef0;
+  border-radius:2px;
+  overflow:hidden;
+  height:100%;
+  display:flex;
+  flex-direction:column;
+  transition:all .35s ease;
+}
+.highlight-card:hover{
+  border-color:var(--tua-gold);
+  box-shadow:0 18px 40px rgba(14,42,71,.08);
+  transform:translateY(-6px);
+}
+.highlight-img{
+  height:180px;
+  background-size:cover;
+  background-position:center;
+  position:relative;
+}
+.highlight-img.is-placeholder::before{
+  content:"Miejsce na zdjęcie";
+  position:absolute;
+  inset:0;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:0 1rem;
+  font-size:.72rem;
+  letter-spacing:.05em;
+  text-transform:uppercase;
+  color:#8b96a1;
+  background:rgba(255,255,255,.6);
+  opacity:0;
+  transition:opacity .3s ease;
+}
+.highlight-img.is-placeholder:hover::before{
+  opacity:1;
+}
+.highlight-badge{
+  position:absolute;
+  top:.9rem; left:.9rem;
+  background:rgba(14,42,71,.85);
+  color:#fff;
+  font-size:.7rem;
+  letter-spacing:.06em;
+  text-transform:uppercase;
+  padding:.35rem .75rem;
+  border-radius:20px;
+}
+.highlight-body{
+  padding:1.4rem 1.3rem 1.6rem;
+  display:flex;
+  flex-direction:column;
+  flex:1;
+}
+.highlight-body h3{
+  font-family:'Playfair Display', serif;
+  font-size:1.15rem;
+  color:var(--tua-navy);
+  margin-bottom:.6rem;
+}
+.highlight-body p{
+  font-size:.87rem;
+  color:#5b6773;
+  line-height:1.65;
+  flex:1;
+  margin-bottom:0;
+}
+.highlight-link{
+  display:inline-flex;
+  align-items:center;
+  gap:.35rem;
+  font-size:.78rem;
+  letter-spacing:.05em;
+  text-transform:uppercase;
+  font-weight:600;
+  color:var(--tua-navy);
+  margin-top:1rem;
+}
+.highlight-link:hover{
+  color:var(--tua-gold);
+}
+
 /* ===== OFERTA CARDS ===== */
 .pillar-card{
   background:#fff;
